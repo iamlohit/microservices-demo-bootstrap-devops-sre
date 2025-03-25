@@ -39,6 +39,8 @@ COPY --from=builder /usr/local/lib/python3.12/ /usr/local/lib/python3.12/
 COPY . .
 
 # set listen port
+# 1 warning found (use docker --debug to expand):
+# - LegacyKeyValueFormat: "ENV key=value" should be used instead of legacy "ENV key value" format
 ENV PORT "8080"
 EXPOSE 8080
 
