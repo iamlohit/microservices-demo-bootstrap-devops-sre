@@ -19,9 +19,12 @@ IMAGES=(
 )
 
 # Load each image into minikube
-for image in "${images[@]}"; do
+for image in "${IMAGES[@]}"; do
   echo "Loading $image into Minikube..."
   minikube image load $image
 done
+
+# Verify
+minikube image ls
 
 echo "All images loaded to Minikube successfully!"
